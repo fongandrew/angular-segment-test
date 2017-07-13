@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  test() {
+    analytics.identify("my-uid");
+    analytics.track("MY_EVENT", { prop: 123 });
+  }
 }

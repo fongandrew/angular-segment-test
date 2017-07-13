@@ -8,4 +8,9 @@ if (environment.production) {
   enableProdMode();
 }
 
+// Interface should be visible too
+declare const notAnalytics: SegmentAnalytics.AnalyticsJS;
+notAnalytics.page("SOME_PAGE");
+
+
 platformBrowserDynamic().bootstrapModule(AppModule);
